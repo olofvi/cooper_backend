@@ -4,6 +4,9 @@ RSpec.describe User, type: :model do
   it 'should have valid Factory' do
     expect(FactoryBot.create(:user)).to be_valid
   end
+  describe 'Relations' do
+    it { is_expected.to have_many :performance_data }
+  end
 end
 
 RSpec.describe User, type: :model do
@@ -58,3 +61,4 @@ RSpec.describe User, type: :model do
     end
   end
 end
+
